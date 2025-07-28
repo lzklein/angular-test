@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 1em;
+  max-width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px #aaa;
+  margin: 1em auto;
+}
+img {
+  width: 120px;
+  height: 120px;
+}
