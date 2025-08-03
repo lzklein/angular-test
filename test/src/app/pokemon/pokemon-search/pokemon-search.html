@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input
+    formControlName="pokemonName"
+    placeholder="Enter Pokémon name"
+    aria-label="Pokemon name"
+  />
+  <button type="submit" [disabled]="form.invalid">Search</button>
+
+  <div *ngIf="form.controls['pokemonName'].invalid && form.controls['pokemonName'].touched" style="color:red">
+    <div *ngIf="form.controls['pokemonName'].errors?.['required']">Name is required.</div>
+    <div *ngIf="form.controls['pokemonName'].errors?.['pattern']">Only letters allowed.</div>
+  </div>
+</form>
